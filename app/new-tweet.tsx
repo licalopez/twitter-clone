@@ -2,6 +2,8 @@ import { cookies } from "next/headers"
 import { User, createServerActionClient } from "@supabase/auth-helpers-nextjs"
 import NewTweetForm from "./new-tweet-form";
 
+export const dynamic = 'force-dynamic';
+
 export default function NewTweet({ user }: { user: User }) {
 	const addTweet = async (formData: FormData) => {
 		'use server';
