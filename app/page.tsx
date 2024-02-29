@@ -2,7 +2,6 @@ import { cookies } from "next/headers";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { redirect } from "next/navigation";
 import AuthButtonServer from "./components/auth-button-server";
-import Likes from "./likes";
 import NewTweet from "./new-tweet";
 import Tweets from "./tweets";
 
@@ -26,10 +25,17 @@ export default async function Home() {
   })) ?? []
 
   return (
-    <>
-      <AuthButtonServer />
-      <NewTweet />
-      <Tweets tweets={tweets} />
-    </>
+    <main className="flex flex-col gap-5 max-w-xl mx-auto pb-10 w-full">
+      <div className="bg-main border border-border border-t-0 flex justify-between px-4 py-6 rounded-b-lg">
+        <h1 className="font-bold text-xl">
+          Home
+        </h1>
+        <AuthButtonServer />
+      </div>
+      <NewTweet user={session.user} />
+      <section className="flex flex-col gap-5">
+        <Tweets tweets={tweets} />
+      </section>
+    </main>
   );
 }

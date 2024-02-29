@@ -20,13 +20,9 @@ export default function AuthButtonClient({ session }: { session: Session | null 
 		router.refresh();
 	}
 
-	return session ? (
-		<button onClick={handleLogout }>
-			Logout
-		</button>
-	) : (
-		<button onClick={handleLogin}>
-			Login
+	return (
+		<button className="text-gray-400 text-sm" onClick={session ? handleLogout : handleLogin}>
+			{session ? 'Logout' : 'Login'}
 		</button>
 	)
 }
