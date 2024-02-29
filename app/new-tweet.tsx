@@ -11,10 +11,10 @@ export default function NewTweet({ user }: { user: User }) {
 	}
 
 	return (
-			<NewTweetForm 
-				addTweet={addTweet} 
-				avatarUrl={user.user_metadata.avatar_url} 
-				name={user.user_metadata.name}
-			/>
+		<NewTweetForm 
+			addTweet={addTweet} 
+			avatarUrl={user.user_metadata.avatar_url} 
+			name={user.user_metadata.name}
+		/>
 	)
 }

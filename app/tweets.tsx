@@ -38,7 +38,7 @@ export default function Tweets({ tweets }: { tweets: TweetWithAuthor[] }) {
 
 	return optimisticTweets.map(tweet => (
 		<div key={tweet.id} className="bg-main border border-border flex px-4 py-8 rounded-lg">
-			<div id="user-avatar" className="h-12 w-12">
+			<div id="user-avatar" className="h-10 w-10">
 				<Image 
 					alt={`${tweet.author.name}'s avatar`} 
 					src={tweet.author.avatar_url} 
@@ -47,7 +47,7 @@ export default function Tweets({ tweets }: { tweets: TweetWithAuthor[] }) {
 					width={40}
 				/>
 			</div>
-			<div id="user-tweet" className="ml-4">
+			<div id="user-tweet" className="flex-1 ml-4">
 				<p>
 					<span className="font-bold text-light">{tweet.author.name}</span>
 					<span className="ml-2 text-gray-400 text-sm">@{tweet?.author?.username}</span>

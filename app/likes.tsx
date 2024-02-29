@@ -1,7 +1,6 @@
 'use client'
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 import { useRouter } from "next/navigation";
-import { startTransition } from "react";
 
 interface LikesProps {
 	addOptimisticTweet: (newTweet: TweetWithAuthor) => void, 
