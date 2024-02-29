@@ -25,4 +25,4 @@ Open [http://localhost:3000](http://localhost:3000) on your browser to see the a
 
 ## Deploy on Vercel
 
-The deployed app is viewable on []().
+The deployed app is viewable on [https://twitter-clone-rosy-delta.vercel.app](https://twitter-clone-rosy-delta.vercel.app).
